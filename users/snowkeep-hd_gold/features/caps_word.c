@@ -1,4 +1,4 @@
-/* Copyright 2021 Joshua T.
+/* Copyright 2021 Craig J. (snowkeep)
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -16,26 +16,26 @@
 
 #include "caps_word.h"
 
-static bool is_caps_word_on = false;
+static bool caps_word_on= false;
 
 bool is_caps_word_enabled(void) {
-    return is_caps_word_on;
+    return caps_word_on;
 }
 
 void enable_caps_word(void) {
-    if (is_caps_word_on) return;
-    is_caps_word_on = true;
+    if (caps_word_on) return;
+    caps_word_on = true;
     tap_code(KC_CAPS);
 }
 
 void disable_caps_word(void) {
-    if (!is_caps_word_on) return;
-    is_caps_word_on = false;
+    if (!caps_word_on) return;
+    caps_word_on = false;
     tap_code(KC_CAPS);
 }
 
 void toggle_caps_word(void) {
-    if (is_caps_word_on) {
+    if (caps_word_on) {
         disable_caps_word();
     }
     else {
@@ -66,24 +66,19 @@ bool should_terminate_caps_word(uint16_t keycode, const keyrecord_t *record) {
 
 
 bool process_record_caps_word(uint16_t keycode, const keyrecord_t *record) {
-    // Nothing in this function acts on key release
-    if (!record->event.pressed) {
-        return true;
-    }
-
     // Handle the custom keycodes that go with this feature
-    if (((get_mods() | get_oneshot_mods()) & MOD_MASK_SHIFT) == MOD_MASK_SHIFT) {
-        clear_mods();
-        clear_oneshot_mods();
-        enable_caps_word();
-        return false;
+    if (!caps_word_on) {
+      if (((get_mods() | get_oneshot_mods()) & MOD_MASK_SHIFT) == MOD_MASK_SHIFT) {
+          clear_mods();
+          clear_oneshot_mods();
+          enable_caps_word();
+          return false;
+      }
+      return true;
     }
 
-    // If the behavior isn't enabled and the keypress isn't a keycode to
-    // toggle the behavior, allow QMK to handle the keypress as usual
-    if (!is_caps_word_on) {
-        return true;
-    }
+    // Nothing in this function acts on key release
+    if (!record->event.pressed) { return true; }
 
     // Get the base keycode of a mod or layer tap key
     switch (keycode) {
