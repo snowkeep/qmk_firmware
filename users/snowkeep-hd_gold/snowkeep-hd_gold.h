@@ -19,7 +19,6 @@
 #include "sk-hdg_keycodes.h"
 #include "sk-hdg_layers.h"
 //#include "sk-hdg_overrides.h"
-//#include "sk-hdg_combos.h"
 
 #include "features/caps_word.h"
 

@@ -12,5 +12,7 @@ COMBO_ENABLE = yes
 
 SRC += snowkeep-hd_gold.c \
 			 features/caps_word.c \
-			 process_records.c
+			 process_records.c \
+			 sk-hdg_combos.c \
+			 sk-hdg_overrides.c
 

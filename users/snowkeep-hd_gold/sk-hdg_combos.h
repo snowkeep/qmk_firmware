@@ -14,15 +14,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+#pragma once
 #include QMK_KEYBOARD_H
 #include "snowkeep-hd_gold.h"
-// why does this have to be here instead of included in the above?
-#include "sk-hdg_overrides.h"
 
-__attribute__ ((weak))
-void keyboard_post_init_user_kb(void) { }
-
-void keyboard_post_init_user(void) {
-    keyboard_post_init_user_kb();
-}
-
+void process_combo_event(uint16_t combo_index, bool pressed);
