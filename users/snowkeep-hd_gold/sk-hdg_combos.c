@@ -25,7 +25,8 @@ enum combo_events {
   CMB_SH,
   CMB_PH,
   CMB_GH,
-  CMB_WH
+  CMB_WH,
+  CMB_CAPSWORD
 };
 
 const uint16_t PROGMEM q_combo[] = {KC_U, KC_K, COMBO_END};
@@ -36,6 +37,7 @@ const uint16_t PROGMEM sh_combo[] = {ALT_S, CTR_N, COMBO_END};
 const uint16_t PROGMEM ph_combo[] = {KC_P, KC_M, COMBO_END};
 const uint16_t PROGMEM gh_combo[] = {KC_G, KC_L, COMBO_END};
 const uint16_t PROGMEM wh_combo[] = {KC_W, SFT_D, COMBO_END};
+const uint16_t PROGMEM caps_combo[] = {KC_C, KC_U, COMBO_END};
 //const uint16_t PROGMEM undo_combo[] = {KC_G, KC_C, COMBO_END};
 //const uint16_t PROGMEM cut_combo[] = {KC_J, KC_L, COMBO_END};
 //const uint16_t PROGMEM copy_combo[] = {KC_M, KC_D, COMBO_END};
@@ -50,6 +52,8 @@ combo_t key_combos[COMBO_COUNT] = {
   [CMB_PH] = COMBO_ACTION(ph_combo),
   [CMB_GH] = COMBO_ACTION(gh_combo),
   [CMB_WH] = COMBO_ACTION(wh_combo),
+  [CMB_CAPSWORD] = COMBO_ACTION(caps_combo)
+
 //  [UNDO] = COMBO_ACTION(undo_combo),
 //  [CUT] = COMBO_ACTION(cut_combo),
 //  [COPY] = COMBO_ACTION(copy_combo),
@@ -72,37 +76,61 @@ void process_combo_event(uint16_t combo_index, bool pressed) {
 
     case CMB_TH:
       if (pressed) {
-        SEND_STRING("th");
+        tap_code(KC_T); 
+        unregister_code(KC_LSFT);
+        unregister_code(KC_RSFT);
+        tap_code(KC_H);
       }
       break;
 
     case CMB_CH:
       if (pressed) {
-        SEND_STRING("ch");
+        tap_code(KC_C); 
+        unregister_code(KC_LSFT);
+        unregister_code(KC_RSFT);
+        tap_code(KC_H);
       }
       break;
 
     case CMB_SH:
       if (pressed) {
-        SEND_STRING("sh");
+        tap_code(KC_S); 
+        unregister_code(KC_LSFT);
+        unregister_code(KC_RSFT);
+        tap_code(KC_H);
       }
       break;
 
     case CMB_PH:
       if (pressed) {
-        SEND_STRING("ph");
+        tap_code(KC_P); 
+        unregister_code(KC_LSFT);
+        unregister_code(KC_RSFT);
+        tap_code(KC_H);
       }
       break;
 
     case CMB_GH:
       if (pressed) {
-        SEND_STRING("gh");
+        tap_code(KC_G); 
+        unregister_code(KC_LSFT);
+        unregister_code(KC_RSFT);
+        tap_code(KC_H);
       }
       break;
 
     case CMB_WH:
       if (pressed) {
-        SEND_STRING("wh");
+        tap_code(KC_W); 
+        unregister_code(KC_LSFT);
+        unregister_code(KC_RSFT);
+        tap_code(KC_H);
+      }
+      break;
+
+    case CMB_CAPSWORD:
+      if (pressed) {
+        enable_caps_word();
       }
       break;
 
