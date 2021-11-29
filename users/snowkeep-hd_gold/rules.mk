@@ -10,6 +10,10 @@ NKRO_ENABLE = yes
 
 COMBO_ENABLE = yes
 
+SPACE_CADET_ENABLE = no
+GRAVE_ESC_ENABLE = no
+MAGIC_ENABLE = no
+
 SRC += snowkeep-hd_gold.c \
 			 features/caps_word.c \
 			 process_records.c \
