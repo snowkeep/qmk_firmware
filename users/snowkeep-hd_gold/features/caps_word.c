@@ -43,6 +43,13 @@ void toggle_caps_word(void) {
     }
 }
 
+void caps_word_combo(void) {
+    if (!caps_word_on) {
+        unregister_code(KC_LSFT);
+        unregister_code(KC_RSFT);
+    }
+}
+
 bool should_terminate_caps_word(uint16_t keycode, const keyrecord_t *record) {
     switch (keycode) {
         // Keycodes which should not disable caps word mode

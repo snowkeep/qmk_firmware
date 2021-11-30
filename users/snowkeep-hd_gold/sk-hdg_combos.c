@@ -74,8 +74,7 @@ void process_combo_event(uint16_t combo_index, bool pressed) {
     case CMB_QU:
       if (pressed) {
         tap_code(KC_Q); 
-        unregister_code(KC_LSFT);
-        unregister_code(KC_RSFT);
+        caps_word_combo();
         tap_code(KC_U);
       }
       break;
@@ -89,8 +88,7 @@ void process_combo_event(uint16_t combo_index, bool pressed) {
     case CMB_TH:
       if (pressed) {
         tap_code(KC_T); 
-        unregister_code(KC_LSFT);
-        unregister_code(KC_RSFT);
+        caps_word_combo();
         tap_code(KC_H);
       }
       break;
@@ -98,8 +96,7 @@ void process_combo_event(uint16_t combo_index, bool pressed) {
     case CMB_CH:
       if (pressed) {
         tap_code(KC_C); 
-        unregister_code(KC_LSFT);
-        unregister_code(KC_RSFT);
+        caps_word_combo();
         tap_code(KC_H);
       }
       break;
@@ -107,8 +104,7 @@ void process_combo_event(uint16_t combo_index, bool pressed) {
     case CMB_SH:
       if (pressed) {
         tap_code(KC_S); 
-        unregister_code(KC_LSFT);
-        unregister_code(KC_RSFT);
+        caps_word_combo();
         tap_code(KC_H);
       }
       break;
@@ -116,8 +112,7 @@ void process_combo_event(uint16_t combo_index, bool pressed) {
     case CMB_PH:
       if (pressed) {
         tap_code(KC_P); 
-        unregister_code(KC_LSFT);
-        unregister_code(KC_RSFT);
+        caps_word_combo();
         tap_code(KC_H);
       }
       break;
@@ -125,8 +120,7 @@ void process_combo_event(uint16_t combo_index, bool pressed) {
     case CMB_GH:
       if (pressed) {
         tap_code(KC_G); 
-        unregister_code(KC_LSFT);
-        unregister_code(KC_RSFT);
+        caps_word_combo();
         tap_code(KC_H);
       }
       break;
@@ -134,15 +128,14 @@ void process_combo_event(uint16_t combo_index, bool pressed) {
     case CMB_WH:
       if (pressed) {
         tap_code(KC_W); 
-        unregister_code(KC_LSFT);
-        unregister_code(KC_RSFT);
+        caps_word_combo();
         tap_code(KC_H);
       }
       break;
 
     case CMB_CAPSWORD:
       if (pressed) {
-        enable_caps_word();
+        toggle_caps_word();
       }
       break;
 
