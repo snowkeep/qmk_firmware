@@ -27,7 +27,10 @@ enum combo_events {
   CMB_PH,
   CMB_GH,
   CMB_WH,
-  CMB_CAPSWORD
+  CMB_CAPSWORD,
+  CMB_SHBANG,
+  CMB_UPDIR
+
 };
 
 const uint16_t PROGMEM q_combo[]  = {KC_U, KC_Y, COMBO_END};
@@ -40,6 +43,8 @@ const uint16_t PROGMEM ph_combo[] = {KC_P, KC_M, COMBO_END};
 const uint16_t PROGMEM gh_combo[] = {KC_G, KC_L, COMBO_END};
 const uint16_t PROGMEM wh_combo[] = {KC_W, SFT_D, COMBO_END};
 const uint16_t PROGMEM caps_combo[] = {KC_C, KC_U, COMBO_END};
+const uint16_t PROGMEM shbang_combo[] = {KC_1, KC_3, COMBO_END};
+const uint16_t PROGMEM updir_combo[] = {KC_DOT, KC_SLSH, COMBO_END};
 //const uint16_t PROGMEM undo_combo[] = {KC_G, KC_C, COMBO_END};
 //const uint16_t PROGMEM cut_combo[] = {KC_J, KC_L, COMBO_END};
 //const uint16_t PROGMEM copy_combo[] = {KC_M, KC_D, COMBO_END};
@@ -55,7 +60,9 @@ combo_t key_combos[COMBO_COUNT] = {
   [CMB_PH] = COMBO_ACTION(ph_combo),
   [CMB_GH] = COMBO_ACTION(gh_combo),
   [CMB_WH] = COMBO_ACTION(wh_combo),
-  [CMB_CAPSWORD] = COMBO_ACTION(caps_combo)
+  [CMB_CAPSWORD] = COMBO_ACTION(caps_combo),
+  [CMB_SHBANG] = COMBO_ACTION(shbang_combo),
+  [CMB_UPDIR] = COMBO_ACTION(updir_combo)
 
 //  [UNDO] = COMBO_ACTION(undo_combo),
 //  [CUT] = COMBO_ACTION(cut_combo),
@@ -136,6 +143,18 @@ void process_combo_event(uint16_t combo_index, bool pressed) {
     case CMB_CAPSWORD:
       if (pressed) {
         toggle_caps_word();
+      }
+      break;
+
+    case CMB_SHBANG:
+      if (pressed) {
+        SEND_STRING("#!");
+      }
+      break;
+
+    case CMB_UPDIR:
+      if (pressed) {
+        SEND_STRING("../");
       }
       break;
 
