@@ -30,7 +30,6 @@
 // #define USE_I2C
 
 #define COMBO_TERM 25
-#define COMBO_COUNT 15
 
 #define TAPPING_TERM 200
 #define IGNORE_MOD_TAP_INTERRUPT

@@ -29,9 +29,14 @@ enum combo_events {
   CMB_WH,
   CMB_CAPSWORD,
   CMB_SHBANG,
-  CMB_UPDIR
-
+  CMB_UPDIR,
+  CMB_BKSP,
+  CMB_UNDS,
+  CMB_TAB,
+  CMB_ESC,
+  COMBO_LENGTH
 };
+uint16_t COMBO_LEN = COMBO_LENGTH;
 
 const uint16_t PROGMEM q_combo[]  = {KC_U, KC_Y, COMBO_END};
 const uint16_t PROGMEM qu_combo[] = {KC_U, KC_K, COMBO_END};
@@ -45,12 +50,12 @@ const uint16_t PROGMEM wh_combo[] = {KC_W, SFT_D, COMBO_END};
 const uint16_t PROGMEM caps_combo[] = {KC_C, KC_U, COMBO_END};
 const uint16_t PROGMEM shbang_combo[] = {KC_1, KC_3, COMBO_END};
 const uint16_t PROGMEM updir_combo[] = {KC_DOT, KC_SLSH, COMBO_END};
-//const uint16_t PROGMEM undo_combo[] = {KC_G, KC_C, COMBO_END};
-//const uint16_t PROGMEM cut_combo[] = {KC_J, KC_L, COMBO_END};
-//const uint16_t PROGMEM copy_combo[] = {KC_M, KC_D, COMBO_END};
-//const uint16_t PROGMEM paste_combo[] = {KC_L, KC_B, COMBO_END};
+const uint16_t PROGMEM bksp_combo[] = {KC_DQT, KC_QUOT, COMBO_END};
+const uint16_t PROGMEM unds_combo[] = {CTR_E, ALT_I, COMBO_END};
+const uint16_t PROGMEM tab_combo[] = {KC_J, KC_F, COMBO_END};
+const uint16_t PROGMEM esc_combo[] = {GUI_R, ALT_S, COMBO_END};
 
-combo_t key_combos[COMBO_COUNT] = {
+combo_t key_combos[] = {
   [CMB_Q]  = COMBO_ACTION(q_combo),
   [CMB_QU] = COMBO_ACTION(qu_combo),
   [CMB_Z]  = COMBO_ACTION(z_combo),
@@ -62,7 +67,11 @@ combo_t key_combos[COMBO_COUNT] = {
   [CMB_WH] = COMBO_ACTION(wh_combo),
   [CMB_CAPSWORD] = COMBO_ACTION(caps_combo),
   [CMB_SHBANG] = COMBO_ACTION(shbang_combo),
-  [CMB_UPDIR] = COMBO_ACTION(updir_combo)
+  [CMB_UPDIR] = COMBO_ACTION(updir_combo),
+  [CMB_BKSP] = COMBO_ACTION(bksp_combo),
+  [CMB_UNDS] = COMBO_ACTION(unds_combo),
+  [CMB_TAB] = COMBO_ACTION(tab_combo),
+  [CMB_ESC] = COMBO_ACTION(esc_combo)
 
 //  [UNDO] = COMBO_ACTION(undo_combo),
 //  [CUT] = COMBO_ACTION(cut_combo),
@@ -158,28 +167,29 @@ void process_combo_event(uint16_t combo_index, bool pressed) {
       }
       break;
 
-//  case UNDO:
-//    if (pressed) {
-//      tap_code16(LCTL(KC_Z));
-//    }
-//    break;
-//
-//  case CUT:
-//      if (pressed) {
-//        tap_code16(LCTL(KC_X));
-//      }
-//      break;
-//
-//  case COPY:
-//    if (pressed) {
-//      tap_code16(LCTL(KC_C));
-//    }
-//    break;
-//
-//  case PASTE:
-//    if (pressed) {
-//      tap_code16(LCTL(KC_V));
-//    }
-//    break;
+    case CMB_BKSP:
+      if (pressed) {
+        tap_code16(KC_BSPC);
+      }
+      break;
+
+    case CMB_UNDS:
+      if (pressed) {
+        tap_code16(KC_UNDS);
+      }
+      break;
+
+    case CMB_TAB:
+      if (pressed) {
+        tap_code16(KC_TAB);
+      }
+      break;
+
+    case CMB_ESC:
+      if (pressed) {
+        tap_code16(KC_ESC);
+      }
+      break;
+
   }
 }

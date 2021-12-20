@@ -22,7 +22,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_J,    KC_F,    KC_M,    KC_P,    KC_V,                      KC_COLN, KC_DOT,  KC_SLSH, KC_DQT,  KC_QUOT ,
     GUI_R,   ALT_S,   CTR_N,   SFT_D,   KC_W,                      KC_COMM, SFT_A,   CTR_E,   ALT_I,   GUI_H   ,
     KC_X,    AGR_G,   KC_L,    KC_C,    KC_B,    KC_HOME, KC_END,  KC_MINS, KC_U,    KC_O,    KC_Y,    KC_K    ,
-    KC_DEL,  KC_TAB,  KC_ESC,  NAV,     KC_ENT,  KC_SPC,  KC_T,    SYM,     FUNC,   M_BRACES, KC_UNDS, KC_BSPC
+    KC_DEL,  KC_TAB,  KC_ESC,  NAV,     KC_ENT,  KC_SPC,  KC_T,    SYM,     FUNC,    KC_BSPC, KC_UNDS, M_BRACES
   ),
 
   [_SYM] = LAYOUT(
