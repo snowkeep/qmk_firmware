@@ -19,4 +19,3 @@ SRC += snowkeep-hd.c \
 			 process_records.c \
 			 sk-hd_combos.c \
 			 sk-hd_overrides.c
-

@@ -40,20 +40,31 @@ uint16_t COMBO_LEN = COMBO_LENGTH;
 
 const uint16_t PROGMEM q_combo[]  = {KC_U, KC_Y, COMBO_END};
 const uint16_t PROGMEM qu_combo[] = {KC_U, KC_K, COMBO_END};
-const uint16_t PROGMEM z_combo[]  = {KC_F, KC_M, COMBO_END};
-const uint16_t PROGMEM th_combo[] = {SFT_D, CTR_N, COMBO_END};
-const uint16_t PROGMEM ch_combo[] = {KC_C, KC_L, COMBO_END};
 const uint16_t PROGMEM sh_combo[] = {ALT_S, CTR_N, COMBO_END};
 const uint16_t PROGMEM ph_combo[] = {KC_P, KC_M, COMBO_END};
-const uint16_t PROGMEM gh_combo[] = {KC_G, KC_L, COMBO_END};
-const uint16_t PROGMEM wh_combo[] = {KC_W, SFT_D, COMBO_END};
 const uint16_t PROGMEM caps_combo[] = {KC_C, KC_U, COMBO_END};
 const uint16_t PROGMEM shbang_combo[] = {KC_1, KC_3, COMBO_END};
 const uint16_t PROGMEM updir_combo[] = {KC_DOT, KC_SLSH, COMBO_END};
 const uint16_t PROGMEM bksp_combo[] = {KC_DQT, KC_QUOT, COMBO_END};
 const uint16_t PROGMEM unds_combo[] = {CTR_E, ALT_I, COMBO_END};
+
+#ifdef KM_GOLD
+const uint16_t PROGMEM z_combo[]  = {KC_F, KC_M, COMBO_END};
+const uint16_t PROGMEM th_combo[] = {SFT_D, CTR_N, COMBO_END};
+const uint16_t PROGMEM ch_combo[] = {KC_C, KC_L, COMBO_END};
+const uint16_t PROGMEM gh_combo[] = {KC_G, KC_L, COMBO_END};
+const uint16_t PROGMEM wh_combo[] = {KC_W, SFT_D, COMBO_END};
 const uint16_t PROGMEM tab_combo[] = {KC_J, KC_F, COMBO_END};
 const uint16_t PROGMEM esc_combo[] = {GUI_R, ALT_S, COMBO_END};
+#endif
+
+#ifdef KM_TITANIUM
+const uint16_t PROGMEM z_combo[]  = {KC_G, KC_M, COMBO_END};
+const uint16_t PROGMEM th_combo[] = {SST_T, CTR_N, COMBO_END};
+const uint16_t PROGMEM ch_combo[] = {GUI_C, ALT_S, COMBO_END};
+const uint16_t PROGMEM gh_combo[] = {KC_G, KC_J, COMBO_END};
+const uint16_t PROGMEM wh_combo[] = {KC_W, KC_Y, COMBO_END};
+#endif
 
 combo_t key_combos[] = {
   [CMB_Q]  = COMBO_ACTION(q_combo),
@@ -70,8 +81,10 @@ combo_t key_combos[] = {
   [CMB_UPDIR] = COMBO_ACTION(updir_combo),
   [CMB_BKSP] = COMBO_ACTION(bksp_combo),
   [CMB_UNDS] = COMBO_ACTION(unds_combo),
+#ifdef KM_GOLD
   [CMB_TAB] = COMBO_ACTION(tab_combo),
   [CMB_ESC] = COMBO_ACTION(esc_combo)
+#endif
 
 //  [UNDO] = COMBO_ACTION(undo_combo),
 //  [CUT] = COMBO_ACTION(cut_combo),

@@ -30,12 +30,22 @@ enum custom_keycodes {
   M_BRACES,
 };
 
-#define GUI_R LGUI_T(KC_R)
 #define ALT_S LALT_T(KC_S)
 #define CTR_N LCTL_T(KC_N)
-#define SFT_D LSFT_T(KC_D)
-#define AGR_G RALT_T(KC_G)
 #define SFT_A RSFT_T(KC_A)
 #define CTR_E RCTL_T(KC_E)
 #define ALT_I LALT_T(KC_I)
 #define GUI_H RGUI_T(KC_H)
+
+#ifdef KM_GOLD
+#define GUI_R LGUI_T(KC_R)
+#define SFT_D LSFT_T(KC_D)
+#define AGR_G RALT_T(KC_G)
+#endif
+
+#ifdef KM_TITANIUM
+#define GUI_C LGUI_T(KC_C)
+#define SST_T LSFT_T(KC_T)
+#define AGR_F RALT_T(KC_F)
+#endif
+
