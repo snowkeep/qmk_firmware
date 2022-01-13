@@ -17,7 +17,7 @@
 #pragma once
 
 // Custom keycodes and macros
-#define _GOLD 0
+#define _HD 0
 #define _SYM 1
 #define _NAV 2
 #define _FUNC 3

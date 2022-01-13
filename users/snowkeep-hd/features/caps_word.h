@@ -1,4 +1,4 @@
-/* Copyright 2021 Craig J. (snowkeep)
+/* Copyright 2021 Joshua T.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -16,6 +16,12 @@
 
 #pragma once
 #include QMK_KEYBOARD_H
-#include "snowkeep-hd_gold.h"
+#include "sk-hd_keycodes.h"
 
-bool process_record_user_kb(uint16_t keycode, keyrecord_t *record);
+bool is_caps_word_enabled(void);
+void enable_caps_word(void);
+void disable_caps_word(void);
+void toggle_caps_word(void);
+void caps_word_combo(void);
+
+bool process_record_caps_word(uint16_t keycode, const keyrecord_t *record);

@@ -16,10 +16,6 @@
 
 #pragma once
 #include QMK_KEYBOARD_H
-#include "sk-hdg_keycodes.h"
-#include "sk-hdg_layers.h"
-//#include "sk-hdg_overrides.h"
+#include "snowkeep-hd.h"
 
-#include "features/caps_word.h"
-
-
+bool process_record_user_kb(uint16_t keycode, keyrecord_t *record);

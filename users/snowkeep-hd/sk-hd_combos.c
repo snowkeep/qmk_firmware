@@ -15,7 +15,7 @@
  */
 
 #include QMK_KEYBOARD_H
-#include "sk-hdg_combos.h"
+#include "sk-hd_combos.h"
 
 enum combo_events {
   CMB_Q,

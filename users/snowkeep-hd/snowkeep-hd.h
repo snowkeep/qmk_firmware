@@ -16,6 +16,10 @@
 
 #pragma once
 #include QMK_KEYBOARD_H
-#include "snowkeep-hd_gold.h"
+#include "sk-hd_keycodes.h"
+#include "sk-hd_layers.h"
+//#include "sk-hd_overrides.h"
 
-void process_combo_event(uint16_t combo_index, bool pressed);
+#include "features/caps_word.h"
+
+

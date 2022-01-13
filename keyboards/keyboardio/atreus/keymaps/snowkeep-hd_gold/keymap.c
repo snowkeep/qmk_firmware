@@ -15,7 +15,7 @@
  */
 
 #include QMK_KEYBOARD_H
-#include "snowkeep-hd_gold.h"
+#include "snowkeep-hd.h"
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_GOLD] = LAYOUT( /* Qwerty */
@@ -36,7 +36,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     XXXXXXX, KC_HOME, KC_UP,   KC_END,  KC_PGUP,                   KC_UP,   KC_7,    KC_8,    KC_9,    KC_MINS ,
     KC_DEL,  KC_LEFT, KC_DOWN, KC_RGHT, KC_PGDN,                   KC_DOWN, KC_4,    KC_5,    KC_6,    KC_PLUS ,
     _______, _______, _______, _______, _______, _______, _______, XXXXXXX, KC_1,    KC_2,    KC_3,    KC_EQL  ,
-    RESET,   XXXXXXX, KC_PSCR, KC_SLCK, XXXXXXX, KC_DEL,  KC_BSPC, KC_SPC,  KC_0,    KC_DOT,  _______, KC_PAUS
+    RESET,   XXXXXXX, KC_PSCR, XXXXXXX, KC_SLCK, KC_DEL,  KC_BSPC, KC_SPC,  KC_0,    KC_DOT,  _______, KC_PAUS
   ),
 
   [_FUNC] = LAYOUT(

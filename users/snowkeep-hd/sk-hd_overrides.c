@@ -15,7 +15,7 @@
  */
 
 #include QMK_KEYBOARD_H
-#include "sk-hdg_overrides.h"
+#include "sk-hd_overrides.h"
 
 const key_override_t coln_scln = ko_make_basic(MOD_MASK_SHIFT, KC_COLN, KC_SCLN);
 const key_override_t dot_amper = ko_make_basic(MOD_MASK_SHIFT, KC_DOT, KC_AMPR);

@@ -14,9 +14,9 @@ SPACE_CADET_ENABLE = no
 GRAVE_ESC_ENABLE = no
 MAGIC_ENABLE = no
 
-SRC += snowkeep-hd_gold.c \
+SRC += snowkeep-hd.c \
 			 features/caps_word.c \
 			 process_records.c \
-			 sk-hdg_combos.c \
-			 sk-hdg_overrides.c
+			 sk-hd_combos.c \
+			 sk-hd_overrides.c
 

@@ -20,7 +20,7 @@
 // Custom keycodes and macros
 enum custom_keycodes {
   // layers
-  GOLD = SAFE_RANGE,
+  HD = SAFE_RANGE,
   SYM,
   NAV,
   FUNC,

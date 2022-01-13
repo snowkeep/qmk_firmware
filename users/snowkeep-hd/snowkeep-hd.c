@@ -14,8 +14,15 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#pragma once
 #include QMK_KEYBOARD_H
-#include "snowkeep-hd_gold.h"
+#include "snowkeep-hd.h"
+// why does this have to be here instead of included in the above?
+#include "sk-hd_overrides.h"
 
+__attribute__ ((weak))
+void keyboard_post_init_user_kb(void) { }
+
+void keyboard_post_init_user(void) {
+    keyboard_post_init_user_kb();
+}
 
