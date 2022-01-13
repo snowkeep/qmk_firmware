@@ -27,6 +27,7 @@ enum combo_events {
   CMB_PH,
   CMB_GH,
   CMB_WH,
+  CMB_P4,
   CMB_CAPSWORD,
   CMB_SHBANG,
   CMB_UPDIR,
@@ -54,6 +55,7 @@ const uint16_t PROGMEM th_combo[] = {SFT_D, CTR_N, COMBO_END};
 const uint16_t PROGMEM ch_combo[] = {KC_C, KC_L, COMBO_END};
 const uint16_t PROGMEM gh_combo[] = {KC_G, KC_L, COMBO_END};
 const uint16_t PROGMEM wh_combo[] = {KC_W, SFT_D, COMBO_END};
+const uint16_t PROGMEM p4_combo[] = {KC_P, KC_F, COMBO_END};
 const uint16_t PROGMEM tab_combo[] = {KC_J, KC_F, COMBO_END};
 const uint16_t PROGMEM esc_combo[] = {GUI_R, ALT_S, COMBO_END};
 #endif
@@ -64,6 +66,7 @@ const uint16_t PROGMEM th_combo[] = {SST_T, CTR_N, COMBO_END};
 const uint16_t PROGMEM ch_combo[] = {GUI_C, ALT_S, COMBO_END};
 const uint16_t PROGMEM gh_combo[] = {KC_G, KC_J, COMBO_END};
 const uint16_t PROGMEM wh_combo[] = {KC_W, KC_Y, COMBO_END};
+const uint16_t PROGMEM p4_combo[] = {KC_P, KC_G, COMBO_END};
 #endif
 
 combo_t key_combos[] = {
@@ -76,6 +79,7 @@ combo_t key_combos[] = {
   [CMB_PH] = COMBO_ACTION(ph_combo),
   [CMB_GH] = COMBO_ACTION(gh_combo),
   [CMB_WH] = COMBO_ACTION(wh_combo),
+  [CMB_P4] = COMBO_ACTION(p4_combo),
   [CMB_CAPSWORD] = COMBO_ACTION(caps_combo),
   [CMB_SHBANG] = COMBO_ACTION(shbang_combo),
   [CMB_UPDIR] = COMBO_ACTION(updir_combo),
@@ -159,6 +163,14 @@ void process_combo_event(uint16_t combo_index, bool pressed) {
         tap_code(KC_W); 
         caps_word_combo();
         tap_code(KC_H);
+      }
+      break;
+
+    case CMB_P4:
+      if (pressed) {
+        tap_code(KC_P); 
+        caps_word_combo();
+        tap_code(KC_4);
       }
       break;
 
