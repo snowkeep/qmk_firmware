@@ -23,7 +23,7 @@
   implementations using shift would be more robust.
 * the CTRL-BRACES combo ('(', ')', back-arrow) does something odd in most windows in Windows.  The other 3 BRACES
   variants work as expected.
-* Titanium is not working.  It compiles, but flashes to a paperweight.  I'm not sure why.  The
+* [Titanium](/keyboards/keebio/iris/keymaps/snowkeep-hd_titanium/) is not working.  It compiles, but flashes to a paperweight.  I'm not sure why.  The
   more I looked at the layout, the less I think it's a good fit for me, so it's on hold.  I'll probably revisit it
   when Alan releases and documents it on his website.
 
