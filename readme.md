@@ -8,7 +8,7 @@
   much closer to [Pascal Getreuer's](https://getreuer.info/posts/keyboards/symbol-layer/index.html)
 * CapsWord and some combo ideas also came from Pascal Getreuer's Keyboard Builder's Digest
   [article](https://kbd.news/Caps-Word-and-other-QMK-tips-1073.html).
-* code organization is based off of replicaJunction's QMK user area.
+* code organization is based off of [replicaJunction's](/users/replicaJunction) QMK user area.
 
 ## Supported Keyboards
 
