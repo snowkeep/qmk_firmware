@@ -1,4 +1,4 @@
-# Snowkeep's implematation of Hands Down Gold and Hands Down Titanium
+# Snowkeep's Implementation of Hands Down Gold and Hands Down Titanium
 
 * slightly modified Hands Down Gold and Titanium, by [Alan Reiser](https://sites.google.com/alanreiser.com/handsdown)
   * space is on left thumb, R/T is on right; colon and semi-colon swapped
