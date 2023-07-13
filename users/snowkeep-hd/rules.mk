@@ -17,5 +17,6 @@ MAGIC_ENABLE = no
 SRC += snowkeep-hd.c \
 			 features/caps_word.c \
 			 process_records.c \
-			 sk-hd_combos.c \
 			 sk-hd_overrides.c
+
+INTROSPECTION_KEYMAP_C = sk-hd_combos.c

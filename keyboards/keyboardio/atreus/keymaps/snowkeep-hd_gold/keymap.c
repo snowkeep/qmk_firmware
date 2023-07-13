@@ -2,7 +2,7 @@
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 2 of the License, or    
+ * the Free Software Foundation, either version 2 of the License, or
  * (at your option) any later version.
  *
  * This program is distributed in the hope that it will be useful,
@@ -36,13 +36,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     XXXXXXX, KC_HOME, KC_UP,   KC_END,  KC_PGUP,                   KC_UP,   KC_7,    KC_8,    KC_9,    KC_MINS ,
     KC_DEL,  KC_LEFT, KC_DOWN, KC_RGHT, KC_PGDN,                   KC_DOWN, KC_4,    KC_5,    KC_6,    KC_PLUS ,
     _______, _______, _______, _______, _______, _______, _______, XXXXXXX, KC_1,    KC_2,    KC_3,    KC_EQL  ,
-    RESET,   XXXXXXX, KC_PSCR, XXXXXXX, KC_SLCK, KC_DEL,  KC_BSPC, KC_SPC,  KC_0,    KC_DOT,  _______, KC_PAUS
+    QK_BOOT, XXXXXXX, KC_PSCR, XXXXXXX, KC_SCRL, KC_DEL,  KC_BSPC, KC_SPC,  KC_0,    KC_DOT,  _______, KC_PAUS
   ),
 
   [_FUNC] = LAYOUT(
     KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,                     KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10  ,
     XXXXXXX, KC_MPRV, KC_VOLU, KC_MNXT, XXXXXXX,                   XXXXXXX, KC_F4,   KC_F5,   KC_F6,   KC_F11  ,
     XXXXXXX, KC_MPLY, KC_VOLD, XXXXXXX, XXXXXXX, _______, _______, XXXXXXX, KC_F1,   KC_F2,   KC_F3,   KC_F12  ,
-    XXXXXXX, KC_MSTP, KC_MUTE, XXXXXXX, XXXXXXX, _______, _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, RESET
+    XXXXXXX, KC_MSTP, KC_MUTE, XXXXXXX, XXXXXXX, _______, _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, QK_BOOT
   )
 };
