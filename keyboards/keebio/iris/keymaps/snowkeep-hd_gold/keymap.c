@@ -2,7 +2,7 @@
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 2 of the License, or    
+ * the Free Software Foundation, either version 2 of the License, or
  * (at your option) any later version.
  *
  * This program is distributed in the hope that it will be useful,
@@ -51,9 +51,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //┌────────┬────────┬────────┬────────┬────────┬────────┐                          ┌────────┬────────┬────────┬────────┬────────┬────────┐
      KC_TILD, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC,                            KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, _______,
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
-     _______, XXXXXXX, KC_HOME, KC_UP,   KC_END,  KC_PGUP,                            KC_UP,   KC_7,    KC_8,    KC_9,    KC_MINS, XXXXXXX,
+     _______, XXXXXXX, KC_HOME, KC_UP,   KC_END,  KC_PGUP,                            XXXXXXX, KC_7,    KC_8,    KC_9,    KC_MINS, XXXXXXX,
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
-     KC_DEL,  XXXXXXX, KC_LEFT, KC_DOWN, KC_RGHT, KC_PGDN,                            KC_DOWN, KC_4,    KC_5,    KC_6,    KC_PLUS, _______,
+     KC_DEL,  XXXXXXX, KC_LEFT, KC_DOWN, KC_RGHT, KC_PGDN,                            XXXXXXX, KC_4,    KC_5,    KC_6,    KC_PLUS, _______,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
      BL_STEP, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,          XXXXXXX, XXXXXXX, KC_1,    KC_2,    KC_3,    KC_EQL,  _______,
   //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
