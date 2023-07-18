@@ -14,7 +14,7 @@
 
 * [Keebio Iris](/keyboards/keebio/iris/keymaps/snowkeep-hd_gold/)
 * [Keyboardio Atreus](/keyboards/keyboardio/atreus/keymaps/snowkeep-hd_gold/)
-* [SplitKB Iris](/keyboards/splitkb/iris/keymaps/snowkeep-hd_gold/)
+* [SplitKB Kyria](/keyboards/splitkb/kyria/keymaps/snowkeep-hd_gold/)
 
 ## Notes and Caveats
 
