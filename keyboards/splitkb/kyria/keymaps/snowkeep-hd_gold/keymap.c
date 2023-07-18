@@ -21,8 +21,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_HD] = LAYOUT(
      KC_TAB,  KC_J,    KC_G,    KC_M,    KC_P,    KC_V,                                          KC_COLN, KC_DOT,  KC_SLSH, KC_DQT,  KC_QUOT, KC_BSPC,
      KC_ESC,  GUI_R,   ALT_S,   CTR_N,   SFT_D,   KC_B,                                          KC_COMM, SFT_A,   CTR_E,   ALT_I,   GUI_H,   KC_UNDS,
-     KC_DEL,  KC_X,    AGR_F,   KC_L,    KC_C,    KC_V,    KC_HOME, XXXXXXX,   XXXXXXX, KC_END,  KC_MINS, KC_U,    KC_O,    KC_Y,    KC_K,    M_BRACES,
-                              XXXXXXX,   NAV,     KC_ENT,  KC_SPC , XXXXXXX,   XXXXXXX, KC_T,    SYM,     FUNC,    XXXXXXX
+     KC_DEL,  KC_X,    AGR_F,   KC_L,    KC_C,    KC_W,    KC_HOME, XXXXXXX,   XXXXXXX, KC_END,  KC_MINS, KC_U,    KC_O,    KC_Y,    KC_K,    M_BRACES,
+                              XXXXXXX, XXXXXXX,   NAV,     KC_ENT,  KC_SPC,    KC_T,    SYM,     FUNC,    XXXXXXX, XXXXXXX
     ),
 
     [_SYM] = LAYOUT(
@@ -46,3 +46,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                 _______, _______, _______, _______, _______,   _______, XXXXXXX, _______, _______, _______
     )
 };
+
+
+// disable the power led after book
+void keyboard_pre_init_user(void) {
+  // Set our LED pin as output
+  setPinOutput(24);
+  // Turn the LED off
+  // (Due to technical reasons, high is off and low is on)
+  writePinHigh(24);
+}
